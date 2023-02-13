@@ -36,6 +36,10 @@ resource "aws_eip" "lb" {
   instance = aws_instance.myec2.id
   vpc      = true
 }
+resource "aws_eip" "lb" {
+  instance = aws_instance.myec2.id
+  vpc      = true
+}
 data "aws_ami" "app_ami" {
     owners      = ["amazon"]
     most_recent = true
